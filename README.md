@@ -1,6 +1,6 @@
-* Shared-Contexts-Maximum Wrappers
+# Shared-Contexts-Maximum Wrappers
 
-** Purpose
+## Purpose
 
 QLogic InfiniBand adaptors provide a number of hardware
 contexts used to provide highspeed connections to
@@ -30,12 +30,12 @@ The purpose of these scripts is try to automate setting
 to rely on parameters, instead reading as much information as
 possible from standard locations.
 
-** Important Note
+## Important Note
 
 These scripts have really only been tested on one machine, use
 at your own risk.
 
-** Usage
+## Usage
 
 Place the contents of the package somewhere accessible by
 the users of the cluster, typically in a shared folder, say
@@ -61,7 +61,7 @@ To uninstall:
 ./uninstall.py -i <base-directory>
 ```
 
-** Email on Failure
+## Email on Failure
 
 In order to place the `set_scm.sh` script in the right position
 in the mpirun line, a bit of parsing is required. This will
@@ -72,7 +72,7 @@ system-wide failure, and can optionally email an administrator.
 To enable emailing edit the `mpirun-gen.py` file, there are three
 lines near the beginning of the file that control email.
 
-** Bug Reporting
+## Bug Reporting
 
 Please let me know if anything fails by either reporting an issue
 via github, or contacting me at `furious.luke@gmail.com`.
