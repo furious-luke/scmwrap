@@ -21,5 +21,14 @@ fi
 # echo N_RCPUS: $N_RCPUS
 # echo PSM_SHAREDCONTEXTS_MAX: $PSM_SHAREDCONTEXTS_MAX
 
+# It seems some mpirun implementations are happy to locate binaries
+# in the pwd without using "./". Check for an executable file of the
+# correct name and prefix accordingly.
+if [[ -x "$1" ]]; then
+    CMD=./$1
+else
+    CMD=$1
+fi
+
 # Call actual program.
-exec $1 "${@:2}"
+exec $CMD "${@:2}"
